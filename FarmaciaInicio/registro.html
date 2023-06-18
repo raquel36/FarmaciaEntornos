@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="registro.js"></script>
+    <title>Registro</title>
+</head>
+
+<body onload="getPatients(), getMedication()">
+    <section class="alta">
+        <h4>Registro chip, paciente y medicamento asociado</h4>
+        <div>
+            <label for="chipId"></label>
+            <input class="contenido" type="text" size="30" id="chipId"
+                placeholder="Introduzca el Identifcador del chip">
+        </div>
+        <div>
+            <label for="patientSelect"></label>
+            <select class="contenido" id="patientSelect">
+                <option selected disabled>Pacientes</option>
+            </select>
+        </div>
+        <div>
+            <label for="medicineSelect"></label>
+            <select class="contenido" id="medicineSelect">
+                <option selected disabled>Medicamentos</option>
+            </select>
+        </div>
+        <div>
+            <label for="dateLimit"></label>
+            <input class="contenido" type="date" id="dateLimit">
+        </div>
+        <button class="boton1" onclick="enviar()">Enviar</button>
+        <button class="boton2 " onclick="volverGestion()">Volver a Gestión</button>
+        <div id="resultado"></div>
+    </section>
+</body>
+
+</html>
